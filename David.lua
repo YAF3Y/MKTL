@@ -9244,14 +9244,14 @@ end
 if text == "تفعيل اقتباس" and Manager(msg) and SourceCh(msg) or text == "تفعيل الصوره" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '᥀︙اهلا عزيزي ↫ '..RioRank(msg)..' \n᥀︙تم تفعيل الصوره'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
-DevRio:del(David..'Rio:text:Rio'..msg.chat_id_) 
+DevRio:del(David..'Rio:egtb:Rio'..msg.chat_id_) 
 end
 if text == "تعطيل اقتباس" and Manager(msg) and SourceCh(msg) or text == "تعطيل الصوره" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '᥀︙اهلا عزيزي ↫ '..RioRank(msg)..' \n᥀︙تم تعطيل الصوره'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
-DevRio:set(David..'Rio:text:Rio'..msg.chat_id_,true)  
+DevRio:set(David..'Rio:egtb:Rio'..msg.chat_id_,true)  
 end
-if text and (text == "اقتباس" or text == "↫ صوره ᥀") and not DevRio:get(David..'Rio:text:Rio'..msg.chat_id_) and SourceCh(msg) then
+if text and (text == "اقتباس" or text == "↫ صوره ᥀") and not DevRio:get(David..'Rio:egtb:Rio'..msg.chat_id_) and SourceCh(msg) then
 Rio = math.random(4,1122); 
 local Text ='*᥀︙تم اختيار الاقتباس*'
 keyboard = {}  
@@ -9259,7 +9259,7 @@ keyboard.inline_keyboard = {
 {{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendptext?chat_id=' .. msg.chat_id_ .. '&text=https://t.me/XTUTU/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendpegtb?chat_id=' .. msg.chat_id_ .. '&egtb=https://t.me/XTUTU/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source David     --
 if text == "تفعيل انمي" and Manager(msg) and SourceCh(msg) or text == "تفعيل الانمي" and Manager(msg) and SourceCh(msg) then
