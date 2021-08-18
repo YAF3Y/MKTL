@@ -1039,6 +1039,8 @@ if DataText and DataText:match('/HelpList:(.*)') then
 local Rio = DataText:match('/HelpList:(.*)')
 if tonumber(Rio) == tonumber(data.sender_user_id_) then
 local Help = DevRio:get(David..'Rio:Help')
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+local msg_id = msg.id_/2097152/0.5
 local Text = [[
 ᥀︙اهلا بك في قائمة الاوامر ↫ ⤈ 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -10470,6 +10472,8 @@ return false end
 end
 if text == "الاوامر" and ChCheck(msg) or text == "اوامر" and ChCheck(msg) or text == "مساعده" and ChCheck(msg) then
 local Help = DevRio:get(David..'Rio:Help')
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+local msg_id = msg.id_/2097152/0.5
 local Text = [[
 ᥀︙اهلا بك في قائمة الاوامر ↫ ⤈ 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
