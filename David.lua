@@ -9252,7 +9252,7 @@ riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(m
 DevRio:set(David..'Rio:egtb:Rio'..msg.chat_id_,true)  
 end
 if text and (text == "اقتباس" or text == "↫ صوره ᥀") and not DevRio:get(David..'Rio:egtb:Rio'..msg.chat_id_) and SourceCh(msg) then
-Rio = math.random(4,1122); 
+Rio = math.random(4,11); 
 local Text ='*᥀︙تم اختيار الاقتباس*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
