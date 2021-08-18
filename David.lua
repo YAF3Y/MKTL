@@ -10470,7 +10470,6 @@ return false end
 end
 if text == "الاوامر" and ChCheck(msg) or text == "اوامر" and ChCheck(msg) or text == "مساعده" and ChCheck(msg) then
 local Help = DevRio:get(David..'Rio:Help')
-tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
 local Text = [[
 ᥀︙اهلا بك في قائمة الاوامر ↫ ⤈ 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -10481,7 +10480,6 @@ local Text = [[
 ᥀︙م5 ↫ اوامر المطورين
 ᥀︙م6 ↫ اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-*᥀︙Dev Name ↬ * ["..result.first_name_.."](T.me/"..result.username_..")
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
