@@ -2133,6 +2133,45 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' ..
 end,nil)
 end
 --     Source David     --
+if text == 'الس' or text == 'مط' or text == 'المطوره' then
+local Text_Dev = DevRio:get(David..'Text:Dev:Bot')
+if Text_Dev then 
+send(msg.chat_id_, msg.id_,Text_Dev)
+else
+tdcli_function ({ID = "GetUser",user_id_ =Devld},function(arg,result) 
+local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+end,nil)
+end
+end
+
+if text and text:match("^مسح كليشه السورس$") or text and text:match("^حذف كليشه السورس$") then
+if not SecondSudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
+else
+DevRio:del(David..'Text:Dev:Bot')
+send(msg.chat_id_, msg.id_,'⚠️| تم حذف كليشه المطور')
+end
+if text and text:match("^ضع كليشه السورس$") or text and text:match("^وضع كليشه السورس$") or text and text:match("^تغيير كليشه السورس$") or text and text:match("^↫ تغيير كليشه السورس ᥀$") and ChCheck(msg) then
+if not Sudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
+else
+DevRio:set(David..'Set:Text:Dev:Bot'..msg.chat_id_,true)
+send(msg.chat_id_, msg.id_,'💠| ارسل الكليشه الان')
+return false
+end
+if text and DevRio:get(David..'Set:Text:Dev:Bot'..msg.chat_id_) then
+if text == 'الغاء' then 
+DevRio:del(David..'Set:Text:Dev:Bot'..msg.chat_id_)
+send(msg.chat_id_, msg.id_,'🔘| تم الغاء حفظ كليشة المطور')
+return false
+end
+DevRio:set(David..'Text:Dev:Bot',text)
+DevRio:del(David..'Set:Text:Dev:Bot'..msg.chat_id_)
+send(msg.chat_id_, msg.id_,'🚸| تم حفظ كليسه المطور')
+return false
+end
+
 if text == "معرفي" and ChCheck(msg) or text == "↫  معرفي ᥀" and ChCheck(msg) then
 function get_username(extra,result,success)
 text = '᥀︙معرفك ↫ ❨ User ❩'
@@ -3594,18 +3633,6 @@ end
 end,nil)
 end
 --     Source David     --
-if DevRio:get(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_) then
-if text and text:match("^الغاء$") then 
-DevRio:del(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_)
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙تم الغاء الامر', 1, 'md')
-return false 
-end 
-DevRio:del(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_)
-local Text = msg.content_.text_:match("(.*)")
-DevRio:set(David.."sors:Bot",text)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حفظ كليشة السورس", 1, "md")
-end
---     Source David     --
 if DevRio:get(David.."Rio:DevText"..msg.chat_id_..":" .. msg.sender_user_id_) then
 if text and text:match("^الغاء$") then 
 DevRio:del(David.."Rio:DevText"..msg.chat_id_..":" .. msg.sender_user_id_)
@@ -4067,7 +4094,7 @@ name = string.gsub(name,'🌥','⛅️⛅️⛅️🌥⛅️⛅️⛅️⛅️')
 name = string.gsub(name,'⛄️','☃️☃️☃️☃️⛄️☃️☃️☃️☃️')
 name = string.gsub(name,'👨‍🔬','👩‍🔬👩‍🔬👩‍🔬👩‍🔬👩‍🔬👨‍🔬👩‍🔬👩‍🔬')
 name = string.gsub(name,'👨‍💻','👩‍💻👩‍💻👨‍💻👩‍💻👩‍💻👩‍💻👩‍💻👩‍💻')
-name = string.gsub(name,'👨‍🔧','👩‍🔧👩‍🔧👩‍🔧👩‍🔧👩‍🔧👩‍🔧👨‍🔧👩‍🔧')
+name = string.gsub(name,'👨‍🔧','👩‍🔧👩‍🔧👩‍??👩‍🔧👩‍🔧👩‍🔧👨‍🔧👩‍🔧')
 name = string.gsub(name,'👩‍🍳','👨‍🍳👨‍🍳👩‍🍳👨‍🍳👨‍🍳👨‍🍳👨‍🍳👨‍🍳')
 name = string.gsub(name,'🧚‍♀️','🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♀️🧚‍♂️🧚‍♂️')
 name = string.gsub(name,'🧚‍♂️','🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♂️🧚‍♀️🧚‍♀️')
@@ -4539,26 +4566,6 @@ DevRio:set(David..'Rio:viewget'..msg.sender_user_id_,true)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source David     --
-if text and (text == 'السورس' or text == 'سورس' or text == '↫  السورس ᥀') and not DevRio:get(David..'Rio:Devinline:Pv'..msg.chat_id_) then
-if not DevRio:get(David..'Rio:sors:Time'..msg.sender_user_id_) then
-tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
-local inline = {
-{{text="᥀ المطور .",url="t.me/"..(dp.username_ or "XTUTU")}},
-{{text="᥀ لتنصيب بوت .",url="https://t.me/cicci"}},{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?sorsgroup=botsors"}}
-}
-local sors = DevRio:get(David.."Rio:sors:Bot")
-if sors then 
-sors_Source = sors
-else
-sors_Source = "لايوجد كليشة السورس"
-end 
-SendInline(msg.chat_id_,sors_Source,nil,inline)
-end,nil)
-end
-DevRio:setex(David..'Rio:sors:Time'..msg.sender_user_id_,300,true)
-return false
-end 
-
 if text == "سوراس" and SourceCh(msg) or text == "السوراس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السوارس ᥀" and SourceCh(msg) then
 Text = [[
 Welcome To Source
@@ -11128,20 +11135,6 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حذف كليشة المطور", 1
 DevRio:del(David.."DevText")
 end end
 --     Source David     --
-if text and text:match("^ضع كليشه السورس$") or text and text:match("^وضع كليشه السورس$") or text and text:match("^تغيير كليشه السورس$") or text and text:match("^↫ تغيير كليشه السورس ᥀$") and ChCheck(msg) then
-if not Sudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
-else
-Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙ارسل كليشة السورس الان ", 1, "md")
-DevRio:setex(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_, 300, true)
-end end
-if text and text:match("^مسح كليشه السورس$") or text and text:match("^حذف كليشه السورس$") then
-if not SecondSudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
-else
-Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حذف كليشة السورس", 1, "md")
-DevRio:del(David.."sors:Bot")
-end end
 if DevRio:get(David.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم الغاء الامر", 1, "md") 
