@@ -2109,12 +2109,12 @@ if text == "الزخرفه" or text == "↫ الزخرفه ᥀" then  Dev_Rio(ms
 if text == "معاني الاسماء" or text == "↫ معاني الاسماء ᥀" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙ من خلال البوت يمكنك معرفه معنى اسمك \n᥀︙ فقط قم بارسال امر معنى اسم + الاسم \n᥀︙ مثال : معنى اسم ريو', 1, 'md') end
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙ فقط قم بارسال امر عدد المسح + عدد المسح \n᥀︙ مثال : عدد المسح 100', 1, 'md') end
 if text == "انطق" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙ فقط قم بارسال امر انطق + الكلمه\n᥀︙سيقوم البوت بنطق الكلمه \n᥀︙ مثال : انطق هلو', 1, 'md') end
-if text == "يوتيوب" and ChCheck(msg) or text == "اليوتيوب" and ChCheck(msg) or text == "↫ بوت اليوتيوب ᥀" and ChCheck(msg) or text == "بوت اليوتيوب" and ChCheck(msg) or text == "اريد بوت يوتيوب" and ChCheck(msg) or text == "شمرلي بوت يوتيوب" and ChCheck(msg) or text == "يوت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/LSLHB"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
+if text == "يوتيوب" and ChCheck(msg) or text == "اليوتيوب" and ChCheck(msg) or text == "↫ بوت اليوتيوب ᥀" and ChCheck(msg) or text == "بوت اليوتيوب" and ChCheck(msg) or text == "اريد بوت يوتيوب" and ChCheck(msg) or text == "شمرلي بوت يوتيوب" and ChCheck(msg) or text == "يوت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/t_stbot"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
 if text == "اهمس" and ChCheck(msg) or text == "↫ بوت الهمسه ᥀" and ChCheck(msg) or text == "بوت الهمسه" and ChCheck(msg) or text == "همسه" and ChCheck(msg) or text == "اريد بوت الهمسه" and ChCheck(msg) or text == "دزلي بوت الهمسه" and ChCheck(msg) or text == "دزولي بوت الهمسه" and ChCheck(msg) then  Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙@YAFAEBOT ', 1, 'md') end
-if text == "رابط حذف" and ChCheck(msg) or text == "رابط الحذف" and ChCheck(msg) or text == "اريد رابط الحذف" and ChCheck(msg) or text == "شمرلي رابط الحذف" and ChCheck(msg) or text == "اريد رابط حذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/LSLHB"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
-if text == "↫ بوت الحذف ᥀" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "اريد بوت حذف" and ChCheck(msg) or text == "بوت حذف" and ChCheck(msg) or text == "بوت حذف حسابات" and ChCheck(msg) or text == "راح احذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/LSLHB"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الحذف*',nil,inline) return false end
-if text == "↫ بوت الكت ᥀" and ChCheck(msg) or text == "بوت الكت" and ChCheck(msg) or text == "بوت كت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/LSLHB"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الكت*',nil,inline) return false end
-if text == "↫ بوت الزخرفه ᥀" and ChCheck(msg) or text == "بوت الزخرفه" and ChCheck(msg) or text == "بوت زخرفه" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/lslhb"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الزخرفه*',nil,inline) return false end
+if text == "رابط حذف" and ChCheck(msg) or text == "رابط الحذف" and ChCheck(msg) or text == "اريد رابط الحذف" and ChCheck(msg) or text == "شمرلي رابط الحذف" and ChCheck(msg) or text == "اريد رابط حذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/DYFBOT"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
+if text == "↫ بوت الحذف ᥀" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "اريد بوت حذف" and ChCheck(msg) or text == "بوت حذف" and ChCheck(msg) or text == "بوت حذف حسابات" and ChCheck(msg) or text == "راح احذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/DYFBOT"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الحذف*',nil,inline) return false end
+if text == "↫ بوت الكت ᥀" and ChCheck(msg) or text == "بوت الكت" and ChCheck(msg) or text == "بوت كت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/E9OBot"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الكت*',nil,inline) return false end
+if text == "↫ بوت الزخرفه ᥀" and ChCheck(msg) or text == "بوت الزخرفه" and ChCheck(msg) or text == "بوت زخرفه" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/W5555Bot"}}} SendInline(msg.chat_id_,'*᥀︙اضغط للحصول على بوت الزخرفه*',nil,inline) return false end
 if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ᥀" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1,'᥀︙ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
 -- Source David --
 if text == 'نبذا' and ChCheck(msg) or text == '↫ نبذا ᥀' then
@@ -3594,6 +3594,18 @@ end
 end,nil)
 end
 --     Source David     --
+if DevRio:get(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_) then
+if text and text:match("^الغاء$") then 
+DevRio:del(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_)
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙تم الغاء الامر', 1, 'md')
+return false 
+end 
+DevRio:del(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_)
+local Text = msg.content_.text_:match("(.*)")
+DevRio:set(David.."sors:Bot",text)
+Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حفظ كليشة السورس", 1, "md")
+end
+--     Source David     --
 if DevRio:get(David.."Rio:DevText"..msg.chat_id_..":" .. msg.sender_user_id_) then
 if text and text:match("^الغاء$") then 
 DevRio:del(David.."Rio:DevText"..msg.chat_id_..":" .. msg.sender_user_id_)
@@ -4069,7 +4081,7 @@ name = string.gsub(name,'🕤','🕥🕥🕥🕥🕥🕤🕥🕥')
 name = string.gsub(name,'⌛️','⏳⏳⏳⏳⏳⌛️⏳⏳')
 name = string.gsub(name,'📅','📆📆📆📆📆📅📆📆')
 name = string.gsub(name,'👩‍⚖️','👨‍⚖️👨‍⚖️👨‍⚖️👨‍⚖️👨‍⚖️👩‍⚖️👨‍⚖️👨‍⚖️')
-name = string.gsub(name,'👨‍🎨','👩‍🎨👩‍🎨👨‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨')
+name = string.gsub(name,'👨‍🎨','👩‍🎨👩‍🎨👨‍🎨??‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨')
 DavidTeam = '᥀︙اول واحد يطلع المختلف يربح\n{'..name..'} '
 Dev_Rio(msg.chat_id_, msg.id_, 1,DavidTeam, 1, 'md')
 return false
@@ -4527,7 +4539,27 @@ DevRio:set(David..'Rio:viewget'..msg.sender_user_id_,true)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source David     --
-if text == "سورس" and SourceCh(msg) or text == "السورس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السورس ᥀" and SourceCh(msg) then
+if text and (text == 'السورس' or text == 'سورس' or text == '↫  السورس ᥀') and not DevRio:get(David..'Rio:Devinline:Pv'..msg.chat_id_) then
+if not DevRio:get(David..'Rio:sors:Time'..msg.sender_user_id_) then
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+local inline = {
+{{text="᥀ المطور .",url="t.me/"..(dp.username_ or "XTUTU")}},
+{{text="᥀ لتنصيب بوت .",url="https://t.me/cicci"}},{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?sorsgroup=botsors"}}
+}
+local sors = DevRio:get(David.."Rio:sors:Bot")
+if sors then 
+sors_Source = sors
+else
+sors_Source = "لايوجد كليشة السورس"
+end 
+SendInline(msg.chat_id_,sors_Source,nil,inline)
+end,nil)
+end
+DevRio:setex(David..'Rio:sors:Time'..msg.sender_user_id_,300,true)
+return false
+end 
+
+if text == "سوراس" and SourceCh(msg) or text == "السوراس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السوارس ᥀" and SourceCh(msg) then
 Text = [[
 Welcome To Source
 ᥀︙[TEAM MKTL](https://t.me/XTUTU)
@@ -4535,7 +4567,7 @@ Welcome To Source
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '᥀ Source Channel',url="https://t.me/XTUTU"}},
-{{text = '᥀ Developer',url="t.me/cicci"},{text = '᥀ Tws MKTL',url="https://t.me/AnEeeSBbot"}},{{text= '᥀ Support Source .',url="https://t.me/XTUTU"}}
+{{text = '᥀ Developer',url="t.me/cicci"},{text = '᥀ Tws CRUNSH',url="https://t.me/Cghh78bot"}},{{text= '᥀ Support Source .',url="https://t.me/XTUTU"}}
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/XTUTU&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9241,27 +9273,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source David     --
-if text == "تفعيل اقتباس" and Manager(msg) and SourceCh(msg) or text == "تفعيل الصوره" and Manager(msg) and SourceCh(msg) then
-local DavidTeam = '᥀︙اهلا عزيزي ↫ '..RioRank(msg)..' \n᥀︙تم تفعيل الصوره'
-riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
-DevRio:del(David..'Rio:egtb:Rio'..msg.chat_id_) 
-end
-if text == "تعطيل اقتباس" and Manager(msg) and SourceCh(msg) or text == "تعطيل الصوره" and Manager(msg) and SourceCh(msg) then
-local DavidTeam = '᥀︙اهلا عزيزي ↫ '..RioRank(msg)..' \n᥀︙تم تعطيل الصوره'
-riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
-DevRio:set(David..'Rio:egtb:Rio'..msg.chat_id_,true)  
-end
-if text and (text == "اقتباس" or text == "↫ صوره ᥀") and not DevRio:get(David..'Rio:egtb:Rio'..msg.chat_id_) and SourceCh(msg) then
-Rio = math.random(4,11); 
-local Text ='*᥀︙تم اختيار الاقتباس*'
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendpegtb?chat_id=' .. msg.chat_id_ .. '&egtb=https://t.me/XTUTU/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
---     Source David     --
 if text == "تفعيل انمي" and Manager(msg) and SourceCh(msg) or text == "تفعيل الانمي" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '᥀︙اهلا عزيزي ↫ '..RioRank(msg)..' \n᥀︙تم تفعيل الانمي'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DavidTeam, 14, string.len(msg.sender_user_id_))
@@ -11117,6 +11128,20 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حذف كليشة المطور", 1
 DevRio:del(David.."DevText")
 end end
 --     Source David     --
+if text and text:match("^ضع كليشه السورس$") or text and text:match("^وضع كليشه السورس$") or text and text:match("^تغيير كليشه السورس$") or text and text:match("^↫ تغيير كليشه السورس ᥀$") and ChCheck(msg) then
+if not Sudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
+else
+Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙ارسل كليشة السورس الان ", 1, "md")
+DevRio:setex(David.."Rio:sors:Bot"..msg.chat_id_..":" .. msg.sender_user_id_, 300, true)
+end end
+if text and text:match("^مسح كليشه السورس$") or text and text:match("^حذف كليشه السورس$") then
+if not SecondSudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
+else
+Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم حذف كليشة السورس", 1, "md")
+DevRio:del(David.."sors:Bot")
+end end
 if DevRio:get(David.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 Dev_Rio(msg.chat_id_, msg.id_, 1, "᥀︙تم الغاء الامر", 1, "md") 
