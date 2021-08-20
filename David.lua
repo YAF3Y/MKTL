@@ -2133,42 +2133,6 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' ..
 end,nil)
 end
 --     Source David     --
-if text == 'الس' or text == 'مط' or text == 'المطوره' then
-local Text_Dev = DevRio:get(David..'Text:Dev:Bot')
-if Text_Dev then 
-send(msg.chat_id_, msg.id_,Text_Dev)
-else
-end,nil)
-end
-end
-
-if text and text:match("^مسح كليشه السورس$") or text and text:match("^حذف كليشه السورس$") then
-if not SecondSudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevRio:del(David..'Text:Dev:Bot')
-send(msg.chat_id_, msg.id_,'⚠️| تم حذف كليشه المطور')
-end
-if text and text:match("^ضع كليشه السورس$") or text and text:match("^وضع كليشه السورس$") or text and text:match("^تغيير كليشه السورس$") or text and text:match("^↫ تغيير كليشه السورس ᥀$") and ChCheck(msg) then
-if not Sudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevRio:set(David..'Set:Text:Dev:Bot'..msg.chat_id_,true)
-send(msg.chat_id_, msg.id_,'💠| ارسل الكليشه الان')
-return false
-end
-if text and DevRio:get(David..'Set:Text:Dev:Bot'..msg.chat_id_) then
-if text == 'الغاء' then 
-DevRio:del(David..'Set:Text:Dev:Bot'..msg.chat_id_)
-send(msg.chat_id_, msg.id_,'🔘| تم الغاء حفظ كليشة المطور')
-return false
-end
-DevRio:set(David..'Text:Dev:Bot',text)
-DevRio:del(David..'Set:Text:Dev:Bot'..msg.chat_id_)
-send(msg.chat_id_, msg.id_,'🚸| تم حفظ كليسه المطور')
-return false
-end
-
 if text == "معرفي" and ChCheck(msg) or text == "↫  معرفي ᥀" and ChCheck(msg) then
 function get_username(extra,result,success)
 text = '᥀︙معرفك ↫ ❨ User ❩'
@@ -4091,7 +4055,7 @@ name = string.gsub(name,'🌥','⛅️⛅️⛅️🌥⛅️⛅️⛅️⛅️')
 name = string.gsub(name,'⛄️','☃️☃️☃️☃️⛄️☃️☃️☃️☃️')
 name = string.gsub(name,'👨‍🔬','👩‍🔬👩‍🔬👩‍🔬👩‍🔬👩‍🔬👨‍🔬👩‍🔬👩‍🔬')
 name = string.gsub(name,'👨‍💻','👩‍💻👩‍💻👨‍💻👩‍💻👩‍💻👩‍💻👩‍💻👩‍💻')
-name = string.gsub(name,'👨‍🔧','👩‍🔧👩‍🔧👩‍??👩‍🔧👩‍🔧👩‍🔧👨‍🔧👩‍🔧')
+name = string.gsub(name,'👨‍🔧','👩‍🔧👩‍🔧👩‍🔧👩‍🔧👩‍🔧👩‍🔧👨‍🔧👩‍🔧')
 name = string.gsub(name,'👩‍🍳','👨‍🍳👨‍🍳👩‍🍳👨‍🍳👨‍🍳👨‍🍳👨‍🍳👨‍🍳')
 name = string.gsub(name,'🧚‍♀️','🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♂️🧚‍♀️🧚‍♂️🧚‍♂️')
 name = string.gsub(name,'🧚‍♂️','🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♀️🧚‍♂️🧚‍♀️🧚‍♀️')
@@ -4105,7 +4069,7 @@ name = string.gsub(name,'🕤','🕥🕥🕥🕥🕥🕤🕥🕥')
 name = string.gsub(name,'⌛️','⏳⏳⏳⏳⏳⌛️⏳⏳')
 name = string.gsub(name,'📅','📆📆📆📆📆📅📆📆')
 name = string.gsub(name,'👩‍⚖️','👨‍⚖️👨‍⚖️👨‍⚖️👨‍⚖️👨‍⚖️👩‍⚖️👨‍⚖️👨‍⚖️')
-name = string.gsub(name,'👨‍🎨','👩‍🎨👩‍🎨👨‍🎨??‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨')
+name = string.gsub(name,'👨‍🎨','👩‍🎨👩‍🎨👨‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨👩‍🎨')
 DavidTeam = '᥀︙اول واحد يطلع المختلف يربح\n{'..name..'} '
 Dev_Rio(msg.chat_id_, msg.id_, 1,DavidTeam, 1, 'md')
 return false
@@ -4563,7 +4527,7 @@ DevRio:set(David..'Rio:viewget'..msg.sender_user_id_,true)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source David     --
-if text == "سوراس" and SourceCh(msg) or text == "السوراس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السوارس ᥀" and SourceCh(msg) then
+if text == "سورس" and SourceCh(msg) or text == "السورس" and SourceCh(msg) or text == "يا سورس" and SourceCh(msg) or text == "↫  السورس ᥀" and SourceCh(msg) then
 Text = [[
 Welcome To Source
 ᥀︙[TEAM MKTL](https://t.me/XTUTU)
