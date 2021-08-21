@@ -2177,7 +2177,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text="♟ الشطرنج ♟",url='https://t.me/T4TTTTBOT?game=chess'}},
 {{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحدي الرياضيات",url='https://t.me/gamebot?game=MathBattle'}},
-{{text="اكس او",url='t.me/yaf3i?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},
+{{text="اكس او",url='t.me/yaf3ibot?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},
 {{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},
 {{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},
 {{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},
