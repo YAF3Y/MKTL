@@ -10975,7 +10975,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" and ChCheck(msg) or text == 'المتجر' and ChCheck(msg) or text == '↫  المتجر ᥀' and ChCheck(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/mohammed803/ZAEMFiles/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/YAF3Y/MKTLFiles/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -11007,7 +11007,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and ChCheck(msg) then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/mohammed803/ZAEMFiles/main/ZAEMFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/YAF3Y/MKTLFiles/main/MKTLFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n᥀︙الملف ↫ *"..FileName.."*\n᥀︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -11019,7 +11019,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and ChCheck(msg) then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/mohammed803/ZAEMFiles/main/ZAEMFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/YAF3Y/MKTLFiles/main/MKTLFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
