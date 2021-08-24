@@ -8958,7 +8958,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text == "نسبه الحب" and ChCheck(msg) or text == "نسبة الحب" and ChCheck(msg) then
 DevRio:set(David..'LoveNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسمين لحساب نسبة الحب بينهما كمثال ↫ جاك و روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسال اسمين لحساب نسبة الحب بينهما كمثال ↫ انيس و مارينا', 1, 'md')
 end
 end
 if text and text ~= "نسبه الحب" and text ~= "نسبة الحب" and DevRio:get(David..'LoveNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -8975,7 +8975,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text == "نسبه الخيانه" and ChCheck(msg) or text == "نسبة الخيانه" and ChCheck(msg) or text == "↫ نسبه الخيانه ᥀" and ChCheck(msg) then
 DevRio:set(David..'RyNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true)
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسمين لحساب نسبة الخيانه بينهما كمثال ↫ جاك و روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسمين لحساب نسبة الخيانه بينهما كمثال ↫ انيس و مارينا ', 1, 'md')
 end
 end
 if text and text ~= "نسبه الخيانه" and text ~= "نسبة الخيانه" and text ~= "↫ نسبه الخيانه ᥀" and DevRio:get(David..'RyNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -8992,7 +8992,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text and (text == "نسبه الجمال" or text == "نسبة الجمال" or text == "↫ نسبه الجمال ᥀") and ChCheck(msg) then
 DevRio:set(David..'JNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة جماله كمثال ↫ جاك او روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة جماله كمثال ↫انيس او جميل', 1, 'md')
 end
 end
 if text and text ~= "نسبه الجمال" and text ~= "نسبة الجمال" and text ~= "↫ نسبه الجمال ᥀" and DevRio:get(David..'JNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -9009,7 +9009,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text == "نسبه الكره" and ChCheck(msg) or text == "نسبة الكره" and ChCheck(msg) or text == "↫ نسبه الكره ᥀" and ChCheck(msg) then
 DevRio:set(David..'HataNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسمين لحساب نسبة الكره بينهما كمثال ↫ جاك و روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسمين لحساب نسبة الكره بينهما كمثال ↫ انيس و مارينا', 1, 'md')
 end
 end
 if text and text ~= "نسبه الكره" and text ~= "نسبة الكره" and text ~= "↫ نسبه الكره ᥀" and DevRio:get(David..'HataNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -9026,7 +9026,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text and (text == "نسبه الرجوله" or text == "نسبة الرجوله" or text == "نسبه رجوله" or text == "نسبة رجوله" or text == "↫ نسبه الرجوله ᥀") and ChCheck(msg) then
 DevRio:set(David..'RjolaNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة رجولته كمثال ↫ جاك', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة رجولته كمثال ↫ انيس', 1, 'md')
 end
 end
 if text and text ~= "نسبه الرجوله" and text ~= "نسبة الرجوله" and text ~= "نسبه رجوله" and text ~= "نسبة رجوله" and text ~= "↫ نسبه الرجوله ᥀" and DevRio:get(David..'RjolaNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -9043,7 +9043,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text and (text == "نسبه الانوثه" or text == "نسبة الانوثه" or text == "نسبه انوثه" or text == "نسبة انوثه" or text == "↫ نسبه الانوثه ᥀") and ChCheck(msg) then
 DevRio:set(David..'AnothaNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة انوثته كمثال ↫ روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة انوثته كمثال ↫ مارينا', 1, 'md')
 end
 end
 if text and text ~= "نسبه الانوثه" and text ~= "نسبة الانوثه" and text ~= "نسبه انوثه" and text ~= "نسبة انوثه" and text ~= "↫ نسبه الانوثه ᥀" and DevRio:get(David..'AnothaNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -9060,7 +9060,7 @@ end
 if not DevRio:get(David..'Rio:Nsba:Rio'..msg.chat_id_) then
 if text and (text == "نسبه الغباء" or text == "نسبة الغباء" or text == "↫ نسبه الغباء ᥀") and ChCheck(msg) then
 DevRio:set(David..'StupidNsba:Rio'..msg.chat_id_..msg.sender_user_id_,true) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة غبائه كمثال ↫ جاك او روز', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙قم بارسل اسم الشخص لقياس نسبة غبائه كمثال ↫انيس او مارينا', 1, 'md')
 end
 end
 if text and text ~= "نسبه الغباء" and text ~= "نسبة الغباء" and text ~= "↫ نسبه الغباء ᥀" and DevRio:get(David..'StupidNsba:Rio'..msg.chat_id_..msg.sender_user_id_) then
@@ -9130,7 +9130,7 @@ Rio = math.random(2,1075);
 local Text ='*᥀︙تم اختيار المتحركه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9151,7 +9151,7 @@ Rio = math.random(2,1201);
 local Text ='*᥀︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9172,7 +9172,7 @@ Rio = math.random(4,2725);
 local Text ='*᥀︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9193,7 +9193,7 @@ Rio = math.random(2,1167);
 local Text ='*᥀︙تم اختيار الاغنيه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/DavidMp3/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9214,7 +9214,7 @@ Rio = math.random(2,612);
 local Text ='*᥀︙تم اختيار الريمكس لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9235,7 +9235,7 @@ Rio = math.random(4,1122);
 local Text ='*᥀︙تم اختيار الصوره لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9256,7 +9256,7 @@ Rio = math.random(3,1002);
 local Text ='*᥀︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9277,7 +9277,7 @@ Rio = math.random(45,125);
 local Text ='*᥀︙تم اختيار الفلم لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9298,7 +9298,7 @@ Rio = math.random(2,54);
 local Text ='*᥀︙تم اختيار المسلسل لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '᥀ TEAM MKTL .',url="t.me/XTUTU"}},
+{{text = '᥀ TEAM MOKHTAL .',url="t.me/UUKXX"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -10550,7 +10550,7 @@ local Text = [[
 ᥀︙البوتات بالطرد
 ᥀︙البوتات بالتقيد
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10626,7 +10626,7 @@ local Text = [[
 ᥀︙تقييد يوم + عدد الايام
 ᥀︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10691,7 +10691,7 @@ local Text = [[
 ᥀︙ردود المدير • ردود المطور • التحقق
 ᥀︙ضافني • حساب العمر • الزخرفه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10750,7 +10750,7 @@ local Text = [[
 ᥀︙المنشئين الاساسيين 
 ᥀︙حذف جميع الرتب
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10836,7 +10836,7 @@ local Text = [[
 ᥀︙ترحيب البوت • المغادره
 ᥀︙البوت الخدمي • التواصل
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10885,7 +10885,7 @@ local Text = [[
 ᥀︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ᥀︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-᥀︙[Source Channel](https://t.me/XTUTU)
+᥀︙[Source Channel](https://t.me/UUKXX)
 ]]
 Dev_Rio(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
@@ -11303,7 +11303,7 @@ end
 end 
 ------------------------------------------------
 -- This Source Was Developed By (Rio) cicci.--
---   This Is The Source Channel @XTUTU .   --
+--   This Is The Source Channel @UUKXX .   --
 --                - David -                 --
---        -- https://t.me/XTUTU --         --
+--        -- https://t.me/UUKXX --         --
 ------------------------------------------------  
