@@ -4372,39 +4372,39 @@ Dev_Rio(msg.chat_id_, msg.id_, 1,[[
 ❍♢︙قائمة اوامر التسليه↫ ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
 ❍♢︙ رفع ↣ ↢ تنزيل ملك
-❍♢︙تاك للملوك
+❍♢︙تاك للملوك / ❍♢︙مسح الملوك
 ❍♢︙رفع ↣ ↢ تنزيل ملكه
-❍♢︙تاك للملكات
+❍♢︙تاك للملكات / ❍♢︙مسح الملكات
 ❍♢︙رفع ↣ ↢ تنزيل عسل
-❍♢︙تاك للعسل
+❍♢︙تاك للعسل / ❍♢︙مسح العسل
 ❍♢︙رفع ↣ ↢ تنزيل كيكه 
-❍♢︙تاك للكيكات
+❍♢︙تاك للكيكات / ❍♢︙مسح الكيكات
 ❍♢︙رفع ↣ ↢ تنزيل زق
-❍♢︙تاك للزق
+❍♢︙تاك للزق / ❍♢︙مسح الزق
 ❍♢︙رفع ↣ ↢ تنزيل حمار
-❍♢︙تاك للحمير
+❍♢︙تاك للحمير / ❍♢︙مسح الحمير
 ❍♢︙رفع ↣ ↢ تنزيل بقره
-❍♢︙تاك للبقر
+❍♢︙تاك للبقر / ❍♢︙مسح البقر
 ❍♢︙رفع ↣ ↢ تنزيل كلب
-❍♢︙تاك للكلاب
+❍♢︙تاك للكلاب / ❍♢︙مسح الكلاب
 ❍♢︙رفع ↣ ↢ تنزيل قرد
-❍♢︙تاك للقرود
+❍♢︙تاك للقرود / مسح القرود
 ❍♢︙رفع ↣ ↢ تنزيل تيس
-❍♢︙تاك للتيوس
+❍♢︙تاك للتيوس / ❍♢︙مسح التيوس
 ❍♢︙رفع ↣ ↢ تنزيل ثور
-❍♢︙تاك للثيران
+❍♢︙تاك للثيران / ❍♢︙مسح الثيران
 ❍♢︙رفع ↣ ↢ تنزيل باعوص
-❍♢︙تاك للبعصان
+❍♢︙تاك للبعصان / ❍♢︙مسح البعصان
 ❍♢︙رفع ↣ ↢ تنزيل دجاجه
-❍♢︙تاك للدجاج
+❍♢︙تاك للدجاج / ❍♢︙مسح الدجاج
 ❍♢︙رفع ↣ ↢ تنزيل صياد
-❍♢︙تاك للصيادين
+❍♢︙تاك للصيادين / ❍♢︙مسح الصيادين
 ❍♢︙رفع ↣ ↢ تنزيل مجنون
-❍♢︙تاك للمجانين
+❍♢︙تاك للمجانين / ❍♢︙مسح المجانين
 ❍♢︙رفع ↣ ↢ تنزيل خروف
-❍♢︙تاك للخرفان
+❍♢︙تاك للخرفان / ❍♢︙مسح الخرفان
 ❍♢︙رفع لقلبي ↣ ↢ تنزيل من قلبي
-❍♢︙تاك للقلوب
+❍♢︙تاك للقلوب / ❍♢︙مسح القلوب
 ❍♢︙زواج ↣ ↢ طلاق
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 ❍♢︙[Source Channel](https://t.me/UUKXX)
@@ -9324,6 +9324,62 @@ end
 if txts[2] == 'مجانين' or txtss[2] == 'المجانين' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف المجانين")  
 DevRio:del(David..'User:mgnon:'..msg.chat_id_)
+end
+if txts[2] == 'قلوب' or txtss[2] == 'القلوب' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة القلوب")  
+DevRio:del(David..'User:glb:'..msg.chat_id_)
+end
+if txts[2] == 'ملكات' or txtss[2] == 'الملكات' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الملكات")  
+DevRio:del(David..'User:mlkh:'..msg.chat_id_)
+end
+if txts[2] == 'كلاب' or txtss[2] == 'الكلاب' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الكلاب")  
+DevRio:del(David..'User:klb:'..msg.chat_id_)
+end
+if txts[2] == 'بقر' or txtss[2] == 'البقر' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة البقر")  
+DevRio:del(David..'User:bgrh:'..msg.chat_id_)
+end
+if txts[2] == 'قرود' or txtss[2] == 'القرود' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة القرود")  
+DevRio:del(David..'User:grd:'..msg.chat_id_)
+end
+if txts[2] == 'الثور' or txtss[2] == 'الثيران' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الثيران")  
+DevRio:del(David..'User:thor:'..msg.chat_id_)
+end
+if txts[2] == 'قائمه الدجاج' or txtss[2] == 'الدجاج' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الدجاج")  
+DevRio:del(David..'User:dgagh:'..msg.chat_id_)
+end
+if txts[2] == 'صيادين' or txtss[2] == 'الصيادين' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الصيادين")  
+DevRio:del(David..'User:syad:'..msg.chat_id_)
+end
+if txts[2] == 'خرفان' or txtss[2] == 'الخرفان' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الخرفان")  
+DevRio:del(David..'User:khrof:'..msg.chat_id_)
+end
+if txts[2] == 'تيوس' or txtss[2] == 'التيوس' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة التيوس")  
+DevRio:del(David..'User:tyws:'..msg.chat_id_)
+end
+if txts[2] == 'زق' or txtss[2] == 'الزق' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الزق")  
+DevRio:del(David..'User:zgzg:'..msg.chat_id_)
+end
+if txts[2] == 'كيكه' or txtss[2] == 'الكيكات' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة الكيكات")  
+DevRio:del(David..'User:kikh:'..msg.chat_id_)
+end
+if txts[2] == 'بعصان' or txtss[2] == 'البعصان' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة البعصان")  
+DevRio:del(David..'User:baos:'..msg.chat_id_)
+end
+if txts[2] == 'عسل' or txtss[2] == 'العسل' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف قائمة العسل")  
+DevRio:del(David..'User:assl:'..msg.chat_id_)
 end
 if txts[2] == 'الرابط' or txtss[2] == 'الرابط' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف رابط المجموعه")  
