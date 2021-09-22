@@ -904,7 +904,7 @@ vipmem = 'المميزين • ' else vipmem = '' end
 if DevRio:sismember(David..'Rio:Cleaner:'..data.chat_id_, data.sender_user_id_) then
 cleaner = 'المنظفين • ' else cleaner = '' end
 if DevRio:sismember(David..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
-donky = 'المطايه • ' else donky = '' end
+donky = 'الحمير • ' else donky = '' end
 if DevRio:sismember(David..'Rio:Constructor:'..data.chat_id_, data.sender_user_id_) or DevRio:sismember(David..'Rio:Managers:'..data.chat_id_, data.sender_user_id_) or DevRio:sismember(David..'Rio:Admins:'..data.chat_id_, data.sender_user_id_) or DevRio:sismember(David..'Rio:VipMem:'..data.chat_id_, data.sender_user_id_) or DevRio:sismember(David..'Rio:Cleaner:'..data.chat_id_, data.sender_user_id_) or DevRio:sismember(David..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
 DevRio:srem(David..'Rio:Constructor:'..data.chat_id_,data.sender_user_id_)
 DevRio:srem(David..'Rio:Managers:'..data.chat_id_,data.sender_user_id_)
@@ -1137,7 +1137,7 @@ local Text = [[
 ❍♢︙ضع رابط
 ❍♢︙ضع صوره
 ❍♢︙حذف الرابط
-❍♢︙حذف المطايه
+❍♢︙حذف الحمير
 ❍♢︙كشف البوتات
 ❍♢︙طرد البوتات
 ❍♢︙تنظيف + العدد
@@ -1408,7 +1408,7 @@ local Text = [[
 ❍♢︙معنى اسم + الاسم
 ❍♢︙بوسه • بوسها ↫ بالرد
 ❍♢︙احسب + تاريخ ميلادك
-❍♢︙رفع مطي • تنزيل مطي • المطايه
+❍♢︙رفع حمار • تنزيل حمار • الحمير
 ❍♢︙هينه • هينها ↫ بالرد • بالمعرف
 ❍♢︙صيحه • صيحها ↫ بالرد • بالمعرف
 ❍♢︙صلاحياته ↫ بالرد • بالمعرف • بالايدي
@@ -2117,7 +2117,7 @@ if text == "↫ بوت الخرفه ❍♢" and ChCheck(msg) or text == "بوت 
 if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ❍♢" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1,'❍♢︙ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
 -- Source David --
 if text == 'نبذا' and ChCheck(msg) or text == '↫ نبذا ❍♢' then
-local DavidTeam = {'- Nothing stops him who wants you .','make them wish they had you !.','Maybe a magical girl','٫ 𝖡𝖾 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝗇𝖽 𝖽𝗂𝖿𝖿𝖾𝗋𝖾𝗇𝗍','. 𝖬𝖺𝗄𝖾 𝖽𝗋𝖾𝖺𝗆𝗌 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗋𝖾𝖿𝗋𝖺𝖼𝗍𝗂𝗈𝗇𝗌 . .',':Life is lying .','𝖨 𝗐𝗂𝗅𝗅 𝖺𝗅𝗐𝖺𝗒𝗌 𝗅𝗈𝗏𝖾 𝗒𝗈𝗎 𝗇𝖾𝗏𝖾𝗋 𝖿𝗈𝗋𝗀𝖾𝗍'}  
+local DavidTeam = {'- Nothing stops him who wants you .','make them wish they had you !.','Maybe a magical girl','٫ 𝖡𝖾 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝗇𝖽 𝖽𝗂𝖿𝖿??𝗋𝖾𝗇𝗍','. 𝖬𝖺𝗄𝖾 𝖽𝗋𝖾𝖺𝗆𝗌 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗋𝖾𝖿𝗋𝖺𝖼𝗍𝗂𝗈𝗇𝗌 . .',':Life is lying .','𝖨 𝗐𝗂𝗅𝗅 𝖺𝗅𝗐𝖺𝗒𝗌 𝗅𝗈𝗏𝖾 𝗒𝗈𝗎 𝗇𝖾𝗏𝖾𝗋 𝖿𝗈𝗋𝗀𝖾𝗍'}  
 Dev_Rio(msg.chat_id_, msg.id_, 1, ''..DavidTeam[math.random(#DavidTeam)]..'' , 1, 'md')  
 return false
 end
@@ -4021,7 +4021,7 @@ name = string.gsub(name,'نشيط','كسول')
 name = string.gsub(name,'شبعان','جوعان')
 name = string.gsub(name,'موعطشان','عطشان')
 name = string.gsub(name,'خوش ولد','موخوش ولد')
-name = string.gsub(name,'اني','مطي')
+name = string.gsub(name,'اني','حمار')
 name = string.gsub(name,'هادئ','عصبي')
 DavidTeam = '❍♢︙ما هو عكس كلمة ↫ '..name
 Dev_Rio(msg.chat_id_, msg.id_, 1,DavidTeam, 1, 'md')
@@ -4090,7 +4090,7 @@ name = DevRio2[math.random(#DevRio2)]
 DevRio:set(David..'Rio:GameNum5'..msg.chat_id_,name)
 DevRio:del(David..'Rio:Games:Ids'..msg.chat_id_)
 name = string.gsub(name,'جوز','ينطي ___ للماعنده سنون')
-name = string.gsub(name,'ضراطه','الي يسوق المطي يتحمل ___ ')
+name = string.gsub(name,'ضراطه','الي يسوق الحمار يتحمل ___ ')
 name = string.gsub(name,'بيدك','اكل ___ محد يفيدك')
 name = string.gsub(name,'الحافي','تجدي من ___ نعال')
 name = string.gsub(name,'شقره','مع الخيل يا ___ ')
@@ -6391,29 +6391,53 @@ end
 end
 --     Source David     --
 if msg.reply_to_message_id_ ~= 0 then
-if text and text:match("^رفع مطي$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
+if text and text:match("^رفع حمار$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
 if DevRio:sismember(David..'User:Donky:'..msg.chat_id_, result.sender_user_id_) then
-ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو مطي شرفع منه بعد😹💔") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو حمار شرفع منه بعد😹💔") 
 else
-ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم رفعه في قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم رفعه في قائمة الحمير") 
 DevRio:sadd(David..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
 --     Source David     --
 if msg.reply_to_message_id_ ~= 0  then
-if text and text:match("^تنزيل مطي$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
+if text and text:match("^تنزيل حمار$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
 if not DevRio:sismember(David..'User:Donky:'..msg.chat_id_, result.sender_user_id_) then
-ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو ليس مطي ليتم تنزيله") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو ليس حمار ليتم تنزيله") 
 else
 DevRio:srem(David..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم تنزيله من قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم تنزيله من قائمة الحمير") 
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
 --     Source David     --
+if msg.reply_to_message_id_ ~= 0 then
+if text and text:match("^رفع ملك$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
+function mlk_by_reply(extra, result, success)
+if DevRio:sismember(David..'User:mlk:'..msg.chat_id_, result.sender_user_id_) then
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو ملك شرفع منه بعد😹💔") 
+else
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم رفعه في قائمة الملوك") 
+DevRio:sadd(David..'User:mlk:'..msg.chat_id_, result.sender_user_id_)
+end end
+getMessage(msg.chat_id_, msg.reply_to_message_id_,mlk_by_reply)
+end end
+--     Source David     --
+if msg.reply_to_message_id_ ~= 0  then
+if text and text:match("^تنزيل ملك$") and not DevRio:get(David..'Rio:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
+function mlk_by_reply(extra, result, success)
+if not DevRio:sismember(David..'User:mlk:'..msg.chat_id_, result.sender_user_id_) then
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙هو ليس ملك ليتم تنزيله") 
+else
+DevRio:srem(David..'User:mlk:'..msg.chat_id_, result.sender_user_id_)
+ReplyStatus(msg,result.sender_user_id_,"Reply","❍♢︙تم تنزيله من قائمة الملوك") 
+end end
+getMessage(msg.chat_id_, msg.reply_to_message_id_,mlk_by_reply)
+end end
+
 if Admin(msg) then
 if text and (text:match('^تقييد دقيقه (%d+)$') or text:match('^كتم دقيقه (%d+)$') or text:match('^تقيد دقيقه (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
@@ -6726,7 +6750,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end 
 --     Source David     --
-if text == "المطايه" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
+if text == "الحمير" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:Donky:'..msg.chat_id_)
 text = "❍♢︙قائمة مطاية المجموعه 😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -6737,11 +6761,26 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then
-text = "❍♢︙*لا يوجد مطايه كلها اوادم* 😹💔"
+text = "❍♢︙*لا يوجد حمير كلها اوادم* 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 --     Source David     --
+if text == "الملوك" and ChCheck(msg) or text == "ملوك" and ChCheck(msg) then
+local List = DevRio:smembers(David..'User:mlk:'..msg.chat_id_)
+text = "❍♢︙قائمة ملوك المجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+for k,v in pairs(List) do
+local username = DevRio:get(David..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "❍♢︙*لا يوجد ملوك * 😹💔"
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
+end
 if text == "المطورين الاساسيين" and ChCheck(msg) and RioSudo(msg) or text == "الاساسيين" and RioSudo(msg) and ChCheck(msg) or text == "↫ الاساسيين ❍♢" and RioSudo(msg) and ChCheck(msg) then 
 local List = DevRio:smembers(David..'Rio:RioSudo:')
 text = "❍♢︙قائمة المطورين الاساسيين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8631,8 +8670,8 @@ if txts[2] == 'قوانين' or txtss[2] == 'قوانين' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف القوانين")  
 DevRio:del(David..'Rio:rules'..msg.chat_id_)
 end
-if txts[2] == 'المطايه' or txtss[2] == 'المطايه' then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف المطايه")  
+if txts[2] == 'الحمير' or txtss[2] == 'الحمير' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف الحمير")  
 DevRio:del(David..'User:Donky:'..msg.chat_id_)
 end
 if txts[2] == 'الرابط' or txtss[2] == 'الرابط' then
@@ -8686,7 +8725,7 @@ if not BasicConstructor(msg) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, '❍♢︙للمنشئ الاساسي فقط', 1, 'md')
 else
 DevRio:del(David..'Rio:Ban:'..msg.chat_id_) DevRio:del(David..'Rio:Admins:'..msg.chat_id_) DevRio:del(David..'User:Donky:'..msg.chat_id_) DevRio:del(David..'Rio:VipMem:'..msg.chat_id_) DevRio:del(David..'Rio:Filters:'..msg.chat_id_) DevRio:del(David..'Rio:Muted:'..msg.chat_id_)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "❍♢︙تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • المطايه ❩ بنجاح \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "❍♢︙تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • الحمير ❩ بنجاح \n ✓", 1, 'md')
 end end
 --     Source David     --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
@@ -8704,7 +8743,7 @@ if #constructor ~= 0 then constructort = 'المنشئين • ' else constructo
 if #Managers ~= 0 then Managerst = 'المدراء • ' else Managerst = '' end
 if #admins ~= 0 then adminst = 'الادمنيه • ' else adminst = '' end
 if #vipmem ~= 0 then vipmemt = 'المميزين • ' else vipmemt = '' end
-if #donky ~= 0 then donkyt = 'المطايه • ' else donkyt = '' end
+if #donky ~= 0 then donkyt = 'الحمير • ' else donkyt = '' end
 if #basicconstructor ~= 0 or #constructor ~= 0 or #Managers ~= 0 or #admins ~= 0 or #vipmem ~= 0 or #donky ~= 0 then 
 DevRio:del(David..'Rio:BasicConstructor:'..msg.chat_id_)
 DevRio:del(David..'Rio:Constructor:'..msg.chat_id_)
@@ -10581,7 +10620,7 @@ local Text = [[
 ❍♢︙ضع رابط
 ❍♢︙ضع صوره
 ❍♢︙حذف الرابط
-❍♢︙حذف المطايه
+❍♢︙حذف الحمير
 ❍♢︙كشف البوتات
 ❍♢︙طرد البوتات
 ❍♢︙تنظيف + العدد
@@ -10875,7 +10914,7 @@ local Text = [[
 ❍♢︙معنى اسم + الاسم
 ❍♢︙بوسه • بوسها ↫ بالرد
 ❍♢︙احسب + تاريخ ميلادك
-❍♢︙رفع مطي • تنزيل مطي • المطايه
+❍♢︙رفع حمار • تنزيل حمار • الحمير
 ❍♢︙هينه • هينها ↫ بالرد • بالمعرف
 ❍♢︙صيحه • صيحها ↫ بالرد • بالمعرف
 ❍♢︙تفاعلي • تفاعله ↫ بالرد
