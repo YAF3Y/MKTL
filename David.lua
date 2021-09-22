@@ -4372,38 +4372,39 @@ Dev_Rio(msg.chat_id_, msg.id_, 1,[[
 ❍♢︙قائمة اوامر التسليه↫ ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
 ❍♢︙ رفع ↣ ↢ تنزيل ملك
-❍♢︙الملوك
+❍♢︙تاك للملوك
 ❍♢︙رفع ↣ ↢ تنزيل ملكه
-❍♢︙الملكات
+❍♢︙تاك للملكات
 ❍♢︙رفع ↣ ↢ تنزيل عسل
-❍♢︙العسل
+❍♢︙تاك للعسل
 ❍♢︙رفع ↣ ↢ تنزيل كيكه 
-❍♢︙الكيكات
+❍♢︙تاك للكيكات
 ❍♢︙رفع ↣ ↢ تنزيل زق
-❍♢︙الزق
+❍♢︙تاك للزق
 ❍♢︙رفع ↣ ↢ تنزيل حمار
-❍♢︙الحمير
+❍♢︙تاك للحمير
 ❍♢︙رفع ↣ ↢ تنزيل بقره
-❍♢︙البقر
+❍♢︙تاك للبقر
 ❍♢︙رفع ↣ ↢ تنزيل كلب
-❍♢︙الكلاب
+❍♢︙تاك للكلاب
 ❍♢︙رفع ↣ ↢ تنزيل قرد
-❍♢︙القرود
+❍♢︙تاك للقرود
 ❍♢︙رفع ↣ ↢ تنزيل تيس
-❍♢︙التيوس
+❍♢︙تاك للتيوس
 ❍♢︙رفع ↣ ↢ تنزيل ثور
-❍♢︙الثيران
+❍♢︙تاك للثيران
 ❍♢︙رفع ↣ ↢ تنزيل باعوص
-❍♢︙البعصان
+❍♢︙تاك للبعصان
 ❍♢︙رفع ↣ ↢ تنزيل دجاجه
-❍♢︙الدجاج
+❍♢︙تاك للدجاج
 ❍♢︙رفع ↣ ↢ تنزيل صياد
-❍♢︙الصيادين
+❍♢︙تاك للصيادين
 ❍♢︙رفع ↣ ↢ تنزيل مجنون
-❍♢︙المجانين
+❍♢︙تاك للمجانين
 ❍♢︙رفع ↣ ↢ تنزيل خروف
-❍♢︙الخرفان
+❍♢︙تاك للخرفان
 ❍♢︙رفع لقلبي ↣ ↢ تنزيل من قلبي
+❍♢︙تاك للقلوب
 ❍♢︙زواج ↣ ↢ طلاق
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 ❍♢︙[Source Channel](https://t.me/UUKXX)
@@ -7165,7 +7166,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end 
 --     Source David     --
-if text == "الكلاب" and ChCheck(msg) or text == "الكلب" and ChCheck(msg) then
+if text == "الكلاب" and ChCheck(msg) or text == "تاك للكلاب" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:klb:'..msg.chat_id_)
 text = "❍♢︙قائمة الكلاب بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7180,7 +7181,7 @@ text = "❍♢︙*لا يوجد كلب * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "القرود" and ChCheck(msg) or text == "القرد" and ChCheck(msg) then
+if text == "القرود" and ChCheck(msg) or text == "تاك للقرود" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:grd:'..msg.chat_id_)
 text = "❍♢︙قائمة القرود بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7195,7 +7196,7 @@ text = "❍♢︙*لا يوجد قرد * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "البعصان" and ChCheck(msg) or text == "الباعوص" and ChCheck(msg) then
+if text == "البعصان" and ChCheck(msg) or text == "تاك للبعصان" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:baos:'..msg.chat_id_)
 text = "❍♢︙قائمة البعصان بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7210,7 +7211,7 @@ text = "❍♢︙*لا يوجد باعوص * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "القلوب" and ChCheck(msg) or text == "قائمه القلوب" and ChCheck(msg) then
+if text == "القلوب" and ChCheck(msg) or text == "تاك للقلوب" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:glby:'..msg.chat_id_)
 text = "❍♢︙قائمة القلوب بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7226,7 +7227,7 @@ end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 
-if text == "الحمير" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
+if text == "الحمير" and ChCheck(msg) or text == "تاك للحمير" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:Donky:'..msg.chat_id_)
 text = "❍♢︙قائمة مطاية المجموعه 😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7242,7 +7243,7 @@ end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 --     Source David     --
-if text == "الدجاج" and ChCheck(msg) or text == "الدجاجه" and ChCheck(msg) then
+if text == "الدجاج" and ChCheck(msg) or text == "تاك للدجاج" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:dgagh:'..msg.chat_id_)
 text = "❍♢︙قائمة الدجاج بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7257,7 +7258,7 @@ text = "❍♢︙*لا يوجد دجاجه * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الصيادين" and ChCheck(msg) or text == "الصياد" and ChCheck(msg) then
+if text == "الصيادين" and ChCheck(msg) or text == "تاك للصيادين" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:syad:'..msg.chat_id_)
 text = "❍♢︙قائمة الصيادين بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7272,7 +7273,7 @@ text = "❍♢︙*لا يوجد صياد * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "المجانين" and ChCheck(msg) or text == "المجنون" and ChCheck(msg) then
+if text == "المجانين" and ChCheck(msg) or text == "تاك للمجانين" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:mgnon:'..msg.chat_id_)
 text = "❍♢︙قائمة المجانين بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7287,7 +7288,7 @@ text = "❍♢︙*لا يوجد مجنون * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الخرفان" and ChCheck(msg) or text == "الخروف" and ChCheck(msg) then
+if text == "الخرفان" and ChCheck(msg) or text == "تاك للخرفان" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:khrof:'..msg.chat_id_)
 text = "❍♢︙قائمة الخرفان بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7302,7 +7303,7 @@ text = "❍♢︙*لا يوجد خروف * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الملوك" and ChCheck(msg) or text == "ملوك" and ChCheck(msg) then
+if text == "الملوك" and ChCheck(msg) or text == "تاك للملوك" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:mlk:'..msg.chat_id_)
 text = "❍♢︙قائمة ملوك المجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7317,7 +7318,7 @@ text = "❍♢︙*لا يوجد ملوك * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الكيكات" and ChCheck(msg) or text == "الكيكه" and ChCheck(msg) then
+if text == "الكيكات" and ChCheck(msg) or text == "تاك للكيكات" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:kikh:'..msg.chat_id_)
 text = "❍♢︙قائمة الكيكات بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7332,7 +7333,7 @@ text = "❍♢︙*لا يوجد كيكه * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الملكات" and ChCheck(msg) or text == "ملكات" and ChCheck(msg) then
+if text == "الملكات" and ChCheck(msg) or text == "تاك للملكات" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:mlkh:'..msg.chat_id_)
 text = "❍♢︙قائمة ملكات المجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7347,7 +7348,7 @@ text = "❍♢︙*لا يوجد ملكات * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "التيس" and ChCheck(msg) or text == "التيوس" and ChCheck(msg) then
+if text == "التيس" and ChCheck(msg) or text == "تاك للتيوس" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:tyws:'..msg.chat_id_)
 text = "❍♢︙قائمة تيوس المجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7362,7 +7363,7 @@ text = "❍♢︙*لا يوجد تيس * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "العسل" and ChCheck(msg) or text == "قائمه العسل" and ChCheck(msg) then
+if text == "العسل" and ChCheck(msg) or text == "تاك للعسل" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:assl:'..msg.chat_id_)
 text = "❍♢︙قائمة العسل بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7377,7 +7378,7 @@ text = "❍♢︙*لا يوجد عسل * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "البقر" and ChCheck(msg) or text == "البقره" and ChCheck(msg) then
+if text == "البقر" and ChCheck(msg) or text == "تاك للبقر" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:bgrh:'..msg.chat_id_)
 text = "❍♢︙قائمة البقر بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7392,7 +7393,7 @@ text = "❍♢︙*لا يوجد بقره * 😹💔"
 end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
-if text == "الثيران" and ChCheck(msg) or text == "الثور" and ChCheck(msg) then
+if text == "الثيران" and ChCheck(msg) or text == "تاك للثيران" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:thor:'..msg.chat_id_)
 text = "❍♢︙قائمة الثيران بالمجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
@@ -7408,7 +7409,7 @@ end
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 
-if text == "الزق" and ChCheck(msg) or text == "زق" and ChCheck(msg) then
+if text == "الزق" and ChCheck(msg) or text == "تاك للزق" and ChCheck(msg) then
 local List = DevRio:smembers(David..'User:zgzg:'..msg.chat_id_)
 text = "❍♢︙قائمة زق المجموعة😹💔 ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
