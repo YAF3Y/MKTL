@@ -8674,7 +8674,7 @@ if txts[2] == 'الحمير' or txtss[2] == 'الحمير' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف الحمير")  
 DevRio:del(David..'User:Donky:'..msg.chat_id_)
 end
-if text == 'حذف الملوك' or text == 'مسح الملوك' then
+if txts[2] == 'ملوك' or txtss[2] == 'الملوك' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف الملوك")  
 DevRio:del(David..'User:mlk:'..msg.chat_id_)
 end
@@ -8742,12 +8742,14 @@ local Managers = DevRio:smembers(David..'Rio:Managers:'..msg.chat_id_)
 local admins = DevRio:smembers(David..'Rio:Admins:'..msg.chat_id_)
 local vipmem = DevRio:smembers(David..'Rio:VipMem:'..msg.chat_id_)
 local donky = DevRio:smembers(David..'User:Donky:'..msg.chat_id_)
+local mlk = DevRio:smembers(David..'User:mlk:'..msg.chat_id_)
 if #basicconstructor ~= 0 then basicconstructort = 'المنشئين الاساسيين • ' else basicconstructort = '' end
 if #constructor ~= 0 then constructort = 'المنشئين • ' else constructort = '' end
 if #Managers ~= 0 then Managerst = 'المدراء • ' else Managerst = '' end
 if #admins ~= 0 then adminst = 'الادمنيه • ' else adminst = '' end
 if #vipmem ~= 0 then vipmemt = 'المميزين • ' else vipmemt = '' end
 if #donky ~= 0 then donkyt = 'الحمير • ' else donkyt = '' end
+if #mlk ~= 0 then mlkt = 'الملوك • ' else mlkt = '' end
 if #basicconstructor ~= 0 or #constructor ~= 0 or #Managers ~= 0 or #admins ~= 0 or #vipmem ~= 0 or #donky ~= 0 then 
 DevRio:del(David..'Rio:BasicConstructor:'..msg.chat_id_)
 DevRio:del(David..'Rio:Constructor:'..msg.chat_id_)
@@ -8755,6 +8757,7 @@ DevRio:del(David..'Rio:Managers:'..msg.chat_id_)
 DevRio:del(David..'Rio:Admins:'..msg.chat_id_)
 DevRio:del(David..'Rio:VipMem:'..msg.chat_id_)
 DevRio:del(David..'User:Donky:'..msg.chat_id_)
+DevRio:del(David..'User:mlk:'..msg.chat_id_)
 Dev_Rio(msg.chat_id_, msg.id_, 1, "❍♢︙تم حذف جميع الرتب التاليه ↫ ❨ "..basicconstructort..constructort..Managerst..adminst..vipmemt..donkyt.." ❩ بنجاح \n ✓", 1, 'md')
 else
 Dev_Rio(msg.chat_id_, msg.id_, 1, "❍♢︙لاتوجد رتب هنا", 1, 'md')
