@@ -8674,6 +8674,10 @@ if txts[2] == 'الحمير' or txtss[2] == 'الحمير' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف الحمير")  
 DevRio:del(David..'User:Donky:'..msg.chat_id_)
 end
+if txts[2] == 'حذف الملوك' or txtss[2] == 'مسح الملوك' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف الملوك")  
+DevRio:del(David..'User:mlk:'..msg.chat_id_)
+end
 if txts[2] == 'الرابط' or txtss[2] == 'الرابط' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","❍♢︙تم حذف رابط المجموعه")  
 DevRio:del(David.."Rio:Groups:Links"..msg.chat_id_)
