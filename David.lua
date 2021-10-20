@@ -663,7 +663,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| عذرا عزيزي ↫ ["..dp.first_nam
 return false
 end
 if status == "Reply" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| العضو ↫ ["..dp.first_name_.."](T.me/"..UserName..")".."\n"..text, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| العضو ↫「 ["..dp.first_name_.."](T.me/"..UserName..")".."」\n"..text, 1, 'md')
 return false
 end
 if status == "ReplyBy" then
@@ -4062,7 +4062,7 @@ name = string.gsub(name,'🙍‍♂️','🙎‍♂️🙎‍♂️🙎‍♂️
 name = string.gsub(name,'🧖‍♂️','🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♂️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️')
 name = string.gsub(name,'👬','👭👭👭👭👬👭👭👭')
 name = string.gsub(name,'👨‍👨‍👧','👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👧👨‍👨‍👦👨‍👨‍👦')
-name = string.gsub(name,'🕓','🕒??🕒🕒🕓🕒🕒🕒')
+name = string.gsub(name,'🕓','????🕒🕒🕓🕒🕒🕒')
 name = string.gsub(name,'🕤','🕥🕥🕥🕥🕥🕤🕥🕥')
 name = string.gsub(name,'⌛️','⏳⏳⏳⏳⏳⌛️⏳⏳')
 name = string.gsub(name,'📅','📆📆📆📆📆📅📆📆')
