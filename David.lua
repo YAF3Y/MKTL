@@ -667,7 +667,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| العضو ↫「 ["..dp.first_name_.."]
 return false
 end
 if status == "ReplyBy" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| بواسطة ↫「 ["..dp.first_name_.."](T.me/"..UserName..")".." 」\n"..text, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| بواسطة ↫「["..dp.first_name_.."](T.me/"..UserName..")".."\n"..text, 1, 'md')
 return false
 end
 else
