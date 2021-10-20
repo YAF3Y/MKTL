@@ -667,7 +667,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| العضو ↫「 ["..dp.first_name_.."]
 return false
 end
 if status == "ReplyBy" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| بواسطة ↫   「 ["..dp.first_name_.."](T.me/"..UserName..")".." 」\n"..text, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| بواسطة ↫「 ["..dp.first_name_.."](T.me/"..UserName..")".." 」\n"..text, 1, 'md')
 return false
 end
 else
@@ -2116,7 +2116,7 @@ if text == "↫ بوت الخرفه ✧|" and ChCheck(msg) or text == "بوت ا
 if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ✧|" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1,'✧| ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
 -- Source David --
 if text == 'نبذا' and ChCheck(msg) or text == '↫ نبذا ✧|' then
-local DavidTeam = {'- Nothing stops him who wants you .','make them wish they had you !.','Maybe a magical girl','٫ 𝖡𝖾 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝗇𝖽 𝖽𝗂𝖿𝖿????𝖾𝗇??','. 𝖬𝖺𝗄𝖾 ??𝗋𝖾𝖺???? 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗋𝖾𝖿𝗋𝖺𝖼𝗍𝗂𝗈𝗇𝗌 . .',':Life is lying .','𝖨 𝗐𝗂𝗅𝗅 𝖺𝗅𝗐𝖺𝗒𝗌 𝗅𝗈𝗏𝖾 𝗒𝗈𝗎 𝗇𝖾𝗏𝖾𝗋 𝖿𝗈𝗋𝗀𝖾𝗍'}  
+local DavidTeam = {'- Nothing stops him who wants you .','make them wish they had you !.','Maybe a magical girl','٫ 𝖡𝖾 𝗌𝗂𝗆𝗉𝗅𝖾 𝖺𝗇𝖽 𝖽𝗂𝖿𝖿??𝗋𝖾𝗇??','. 𝖬𝖺𝗄𝖾 ??𝗋𝖾𝖺???? 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗋𝖾𝖿𝗋𝖺𝖼𝗍𝗂𝗈𝗇𝗌 . .',':Life is lying .','𝖨 𝗐𝗂𝗅𝗅 𝖺𝗅𝗐𝖺𝗒𝗌 𝗅𝗈𝗏𝖾 𝗒𝗈𝗎 𝗇𝖾𝗏𝖾𝗋 𝖿𝗈𝗋𝗀𝖾𝗍'}  
 Dev_Rio(msg.chat_id_, msg.id_, 1, ''..DavidTeam[math.random(#DavidTeam)]..'' , 1, 'md')  
 return false
 end
