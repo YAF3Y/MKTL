@@ -9938,19 +9938,13 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '1️⃣', callback_data="/help1"},{text = '2️⃣', callback_data="/help2"},{text = '3️⃣', callback_data="/help3"},
+{text = 'الصحة', callback_data="/help1"},{text = 'الفلوس', callback_data="/help2"},
 },
 {
-{text = '4️⃣', callback_data="/help4"},{text = '5️⃣', callback_data="/help5"},{text = '6️⃣', callback_data="/help6"},
+{text = 'راحة البال', callback_data="/help3"},{text = 'الحظ', callback_data="/help4"},
 },
 {
-{text = '7️⃣', callback_data="/help7"},{text = '8️⃣', callback_data="/help8"}
-},
-{
-{text = 'الالعاب', callback_data="/help10"},{text = 'الاضافات', callback_data="/help11"},
-},
-{
-{text = 'اغلاق اللوحة', callback_data="/clos"},
+{text = 'اغلاق اللعبة', callback_data="/clos"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -9963,7 +9957,7 @@ local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
 if Text == '/help1' then
-if not Mod(data) then
+if not SourceCh(data) then
 local notText = '🚫 عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
