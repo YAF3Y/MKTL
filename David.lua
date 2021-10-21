@@ -1442,21 +1442,6 @@ else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
 end
 end
-if DataText and DataText:match('/HelpList:(.*)') then
-local Rio = DataText:match('/HelpList:(.*)')
-if tonumber(Rio) == tonumber(data.sender_user_id_) then
-local Help = DevRio:get(David..'Rio:Help0')
-local Text = [[
-✧| لو خيروك
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-✧| [Source Channel](https://t.me/UUKXX)
-]] 
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList4:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList1:"..msg.sender_user_id_}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-else
-return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
-end
 end
 if DataText and DataText:match('/HelpList11:(.*)') then
 local Rio = DataText:match('/HelpList11:(.*)')
@@ -11232,7 +11217,7 @@ dp = 'متحركه 🎭'
 elseif DevRio:get(David.."Rio:Voice:GpRed"..v..msg.chat_id_) then
 dp = 'بصمه 🎙'
 elseif DevRio:get(David.."Rio:Stecker:GpRed"..v..msg.chat_id_) then
-dp = 'ملصق ??'
+dp = 'ملصق 🃏'
 elseif DevRio:get(David.."Rio:Text:GpRed"..v..msg.chat_id_) then
 dp = 'رساله ✉'
 elseif DevRio:get(David.."Rio:Photo:GpRed"..v..msg.chat_id_) then
