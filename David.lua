@@ -9947,7 +9947,7 @@ keyboard.inline_keyboard = {
 {text = 'اغلاق اللعبة', callback_data="/clos"},
 },
 }
-local Msg_id = msg.id_/2097152/0.5
+local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
@@ -9963,66 +9963,39 @@ https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?ca
 return false
 end
 local Teext =[[
-🎗️| اهلا بك عزيزي √
-⚜️| اوامر حماية المجموعه⇓⇓
-●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
-🔖| قفل | فتح + الامر 
-⚠️| ❴بالكتم,بالتقييد,بالطرد❵
-●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
-🔒| قفل ⇚ فتح الاضافه
-🔒| قفل ⇚ فتح الدردشه
-🔒| قفل ⇚ فتح الدخول
-🔒| قفل ⇚ فتح البوتات
-🔒| قفل ⇚ فتح الاشعارات
-🔒| قفل ⇚ فتح التعديل
-🔒| قفل ⇚ فتح تعديل الميديا
-🔒| قفل ⇚ فتح الروابط
-🔒| قفل ⇚ فتح المعرفات
-🔒| قفل ⇚ فتح التاك
-🔒| قفل ⇚ فتح الشارحه
-🔒| قفل ⇚ فتح الملصقات
-🔒| قفل ⇚ فتح المتحركه
-🔒| قفل ⇚ فتح الفيديو
-🔒| قفل ⇚ فتح الصور
-🔒| قفل ⇚ فتح الالعاب
-🔒| قفل ⇚ فتح الاغاني
-🔒| قفل ⇚ فتح الصوت
-🔒| قفل ⇚ فتح الفشار
-🔒| قفل ⇚ فتح الفارسيه
-🔒| قفل ⇚ فتح الكيبورد
-🔒| قفل ⇚ فتح التوجيه
-🔒| قفل ⇚ فتح الملفات
-🔒| قفل ⇚ فتح السيلفي
-🔒| قفل ⇚ فتح الجهات
-🔒| قفل ⇚ فتح الماركداون
-🔒| قفل ⇚ فتح الكلايش
-🔒| قفل ⇚ فتح التكرار
-🔒| قفل ⇚ فتح التفليش
+
 ●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '1️⃣', callback_data="/help1"},{text = '2️⃣', callback_data="/help2"},{text = '3️⃣', callback_data="/help3"},
+{text = 'الصحة', callback_data="/help1"},{text = 'الفلوس', callback_data="/help2"},
 },
 {
-{text = '4️⃣', callback_data="/help4"},{text = '5️⃣', callback_data="/help5"},{text = '6️⃣', callback_data="/help6"},
+{text = 'راحة البال', callback_data="/help3"},{text = 'الحظ', callback_data="/help4"},
 },
 {
-{text = '7️⃣', callback_data="/help7"},{text = '8️⃣', callback_data="/help8"}
-},
-{
-{text = 'الالعاب', callback_data="/help10"},{text = 'الاضافات', callback_data="/help11"},
-},
-{
-{text = 'القائمة الرئيسية', callback_data="/help9"},
-},
-{
-{text = 'اغلاق اللوحة', callback_data="/clos"},
+{text = 'اغلاق اللعبة', callback_data="/clos"},
 },
 }
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
+end
+if Text == '/clos' then
+if not SourceCh(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[*تـم اغـلاق الـلـوحـة*
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '', callback_data="/clos"},
+},
+}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if text == "تفعيل الاغاني" and Manager(msg) and SourceCh(msg) or text == "تفعيل اغنيه" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '✧| اهلا عزيزي ↫ 「 '..RioRank(msg)..' 」\n✧| تم تفعيل الاغاني'
