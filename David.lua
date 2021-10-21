@@ -9933,10 +9933,83 @@ local Text = [[
 ✧| لو خيروك من بين هذه وش تختار ?!...
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/Help1"},{text="الحظ",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help0 or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if data.ID == "UpdateNewCallbackQuery" then
+local Chat_id = data.chat_id_
+local Msg_id = data.message_id_
+local msg_idd = Msg_id/2097152/0.5
+local Text = data.payload_.data_
+if Text == '/help1' then
+if not Mod(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+🎗️| اهلا بك عزيزي √
+⚜️| اوامر حماية المجموعه⇓⇓
+●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
+🔖| قفل | فتح + الامر 
+⚠️| ❴بالكتم,بالتقييد,بالطرد❵
+●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
+🔒| قفل ⇚ فتح الاضافه
+🔒| قفل ⇚ فتح الدردشه
+🔒| قفل ⇚ فتح الدخول
+🔒| قفل ⇚ فتح البوتات
+🔒| قفل ⇚ فتح الاشعارات
+🔒| قفل ⇚ فتح التعديل
+🔒| قفل ⇚ فتح تعديل الميديا
+🔒| قفل ⇚ فتح الروابط
+🔒| قفل ⇚ فتح المعرفات
+🔒| قفل ⇚ فتح التاك
+🔒| قفل ⇚ فتح الشارحه
+🔒| قفل ⇚ فتح الملصقات
+🔒| قفل ⇚ فتح المتحركه
+🔒| قفل ⇚ فتح الفيديو
+🔒| قفل ⇚ فتح الصور
+🔒| قفل ⇚ فتح الالعاب
+🔒| قفل ⇚ فتح الاغاني
+🔒| قفل ⇚ فتح الصوت
+🔒| قفل ⇚ فتح الفشار
+🔒| قفل ⇚ فتح الفارسيه
+🔒| قفل ⇚ فتح الكيبورد
+🔒| قفل ⇚ فتح التوجيه
+🔒| قفل ⇚ فتح الملفات
+🔒| قفل ⇚ فتح السيلفي
+🔒| قفل ⇚ فتح الجهات
+🔒| قفل ⇚ فتح الماركداون
+🔒| قفل ⇚ فتح الكلايش
+🔒| قفل ⇚ فتح التكرار
+🔒| قفل ⇚ فتح التفليش
+●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '1️⃣', callback_data="/help1"},{text = '2️⃣', callback_data="/help2"},{text = '3️⃣', callback_data="/help3"},
+},
+{
+{text = '4️⃣', callback_data="/help4"},{text = '5️⃣', callback_data="/help5"},{text = '6️⃣', callback_data="/help6"},
+},
+{
+{text = '7️⃣', callback_data="/help7"},{text = '8️⃣', callback_data="/help8"}
+},
+{
+{text = 'الالعاب', callback_data="/help10"},{text = 'الاضافات', callback_data="/help11"},
+},
+{
+{text = 'القائمة الرئيسية', callback_data="/help9"},
+},
+{
+{text = 'اغلاق اللوحة', callback_data="/clos"},
+},
+}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+
 if DataText and DataText:match('/HelpList11:(.*)') then
 local Rio = DataText:match('/HelpList11:(.*)')
 if tonumber(Rio) == tonumber(data.sender_user_id_) then
