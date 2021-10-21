@@ -1424,125 +1424,6 @@ else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
 end
 end
-end
-if (data.ID == "UpdateNewMessage") then
-local msg = data.message_
-text = msg.content_.text_ 
-if text and DevRio:get(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
-local NewCmmd = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
-if NewCmmd then
-DevRio:del(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
-DevRio:del(David.."Set:Cmd:Group:New"..msg.chat_id_)
-DevRio:srem(David.."List:Cmd:Group:New"..msg.chat_id_,text)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حذف الامر من المجموعه", 1, 'html')  
-else
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| لايوجد امر بهذا الاسم", 1, 'html')
-end
-DevRio:del(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
-return false
-end
-if text and text:match('^'..(DevRio:get(David..'Rio:NameBot') or "مختل")..' ') then
-data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevRio:get(David..'Rio:NameBot') or "مختل")..' ','')
-end
-if data.message_.content_.text_ then
-local NewCmmd = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
-if NewCmmd then
-data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
-end
-end
-if text and DevRio:get(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
-DevRio:set(David.."Set:Cmd:Group:New"..msg.chat_id_,text)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر الجديد", 1, 'html')
-DevRio:del(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
-DevRio:set(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_,"true1") 
-return false
-end
-if text and DevRio:get(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_) == "true1" then
-local NewCmd = DevRio:get(David.."Set:Cmd:Group:New"..msg.chat_id_)
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text,NewCmd)
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,text)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حفظ الامر", 1, 'html')
-DevRio:del(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_)
-return false
-end
-if Constructor(msg) then
-if text == "الاوامر المضافه" and ChCheck(msg) then
-local List = DevRio:smembers(David.."List:Cmd:Group:New"..msg.chat_id_.."") 
-t = "✧| قائمة الاوامر المضافه ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
-for k,v in pairs(List) do
-Cmds = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
-if Cmds then 
-t = t..k.."~ ("..v..") • {"..Cmds.."}\n"
-else
-t = t..k.."~ ("..v..") \n"
-end
-end
-if #List == 0 then
-t = "✧| لاتوجد اوامر مضافه في المجموعه"
-end
-Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
-end
-if text == "حذف الاوامر المضافه" and ChCheck(msg) or text == "حذف الاوامر" and ChCheck(msg) or text == "مسح الاوامر المضافه" and ChCheck(msg) then
-local List = DevRio:smembers(David.."List:Cmd:Group:New"..msg.chat_id_)
-for k,v in pairs(List) do
-DevRio:del(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
-DevRio:del(David.."List:Cmd:Group:New"..msg.chat_id_)
-end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حذف الاوامر المضافه في المجموعه", 1, 'html')
-end
-if text == "ترتيب الاوامر" and Constructor(msg) and ChCheck(msg) then
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ا","ايدي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ا")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":م","رفع مميز")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"م")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":اد","رفع ادمن")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"اد")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":مد","رفع مدير")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"مد")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":من","رفع منشئ")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"من")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":اس","رفع منشئ اساسي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"اس")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":مط","رفع مطور")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"مط")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ثانوي","رفع مطور ثانوي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ثانوي")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تك","تنزيل الكل")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تك")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تعط","تعطيل الايدي بالصوره")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تعط")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصوره")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تفع")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ر","الرابط")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ر")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رر","ردود المدير")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رر")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":،،","مسح المكتومين")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"،،")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رد","اضف رد")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رد")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":سح","مسح سحكاتي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"سح")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رس","مسح رسائلي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رس")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":غ","غنيلي")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"غ")
-DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":#","مسح قائمه العام")
-DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"#")
-send(msg.chat_id_, msg.id_,"✧| تم ترتيب الاوامر بالشكل التالي ~\n✧|  ايدي - ا .\n✧|  رفع مميز - م .\n✧| رفع ادمن - اد .\n✧|  رفع مدير - مد . \n✧|  رفع منشى - من . \n✧|  رفع منشئ الاساسي - اس  .\n✧|  رفع مطور - مط .\n✧| رفع مطور ثانوي - ثانوي .\n✧|  تنزيل الكل - تك .\n✧|  تعطيل الايدي بالصوره - تعط .\n✧|  تفعيل الايدي بالصوره - تفع .\n✧|  الرابط - ر .\n✧|  ردود المدير - رر .\n✧|  مسح المكتومين - ،، .\n✧|  اضف رد - رد .\n✧|  مسح سحكاتي - سح .\n✧|  مسح رسائلي - رس .\n✧|  غنيلي - غ .\n✧| مسح قائمه العام - #")  
-end
-if text == "اضف امر" and ChCheck(msg) or text == "اضافة امر" and ChCheck(msg) or text == "اضافه امر" and ChCheck(msg) then
-DevRio:set(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر القديم", 1, 'html')
-return false
-end
-if text == "حذف امر" and ChCheck(msg) or text == "مسح امر" and ChCheck(msg) then 
-DevRio:set(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
-Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر الذي قمت باضافته يدويا", 1, 'html')
-return false
-end
-end
---     Source David     --
 if text == "لو خيروك" and SourceCh(msg) then
 local Help = DevRio:get(David..'Rio:Help')
 local Text = [[
@@ -1695,6 +1576,119 @@ text = msg.content_.text_
 if text and DevRio:get(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
 local NewCmmd = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
 if NewCmmd then
+DevRio:del(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
+DevRio:del(David.."Set:Cmd:Group:New"..msg.chat_id_)
+DevRio:srem(David.."List:Cmd:Group:New"..msg.chat_id_,text)
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حذف الامر من المجموعه", 1, 'html')  
+else
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| لايوجد امر بهذا الاسم", 1, 'html')
+end
+DevRio:del(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
+return false
+end
+if text and text:match('^'..(DevRio:get(David..'Rio:NameBot') or "مختل")..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevRio:get(David..'Rio:NameBot') or "مختل")..' ','')
+end
+if data.message_.content_.text_ then
+local NewCmmd = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
+if NewCmmd then
+data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
+end
+end
+if text and DevRio:get(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
+DevRio:set(David.."Set:Cmd:Group:New"..msg.chat_id_,text)
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر الجديد", 1, 'html')
+DevRio:del(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
+DevRio:set(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_,"true1") 
+return false
+end
+if text and DevRio:get(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_) == "true1" then
+local NewCmd = DevRio:get(David.."Set:Cmd:Group:New"..msg.chat_id_)
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text,NewCmd)
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,text)
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حفظ الامر", 1, 'html')
+DevRio:del(David.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_)
+return false
+end
+if Constructor(msg) then
+if text == "الاوامر المضافه" and ChCheck(msg) then
+local List = DevRio:smembers(David.."List:Cmd:Group:New"..msg.chat_id_.."") 
+t = "✧| قائمة الاوامر المضافه ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+for k,v in pairs(List) do
+Cmds = DevRio:get(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
+if Cmds then 
+t = t..k.."~ ("..v..") • {"..Cmds.."}\n"
+else
+t = t..k.."~ ("..v..") \n"
+end
+end
+if #List == 0 then
+t = "✧| لاتوجد اوامر مضافه في المجموعه"
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, t, 1, 'html')
+end
+if text == "حذف الاوامر المضافه" and ChCheck(msg) or text == "حذف الاوامر" and ChCheck(msg) or text == "مسح الاوامر المضافه" and ChCheck(msg) then
+local List = DevRio:smembers(David.."List:Cmd:Group:New"..msg.chat_id_)
+for k,v in pairs(List) do
+DevRio:del(David.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
+DevRio:del(David.."List:Cmd:Group:New"..msg.chat_id_)
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| تم حذف الاوامر المضافه في المجموعه", 1, 'html')
+end
+if text == "ترتيب الاوامر" and Constructor(msg) and ChCheck(msg) then
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ا","ايدي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ا")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":م","رفع مميز")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"م")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":اد","رفع ادمن")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"اد")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":مد","رفع مدير")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"مد")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":من","رفع منشئ")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"من")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":اس","رفع منشئ اساسي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"اس")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":مط","رفع مطور")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"مط")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ثانوي","رفع مطور ثانوي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ثانوي")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تك","تنزيل الكل")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تك")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تعط","تعطيل الايدي بالصوره")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تعط")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصوره")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"تفع")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":ر","الرابط")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"ر")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رر","ردود المدير")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رر")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":،،","مسح المكتومين")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"،،")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رد","اضف رد")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رد")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":سح","مسح سحكاتي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"سح")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":رس","مسح رسائلي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"رس")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":غ","غنيلي")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"غ")
+DevRio:set(David.."Set:Cmd:Group:New1"..msg.chat_id_..":#","مسح قائمه العام")
+DevRio:sadd(David.."List:Cmd:Group:New"..msg.chat_id_,"#")
+send(msg.chat_id_, msg.id_,"✧| تم ترتيب الاوامر بالشكل التالي ~\n✧|  ايدي - ا .\n✧|  رفع مميز - م .\n✧| رفع ادمن - اد .\n✧|  رفع مدير - مد . \n✧|  رفع منشى - من . \n✧|  رفع منشئ الاساسي - اس  .\n✧|  رفع مطور - مط .\n✧| رفع مطور ثانوي - ثانوي .\n✧|  تنزيل الكل - تك .\n✧|  تعطيل الايدي بالصوره - تعط .\n✧|  تفعيل الايدي بالصوره - تفع .\n✧|  الرابط - ر .\n✧|  ردود المدير - رر .\n✧|  مسح المكتومين - ،، .\n✧|  اضف رد - رد .\n✧|  مسح سحكاتي - سح .\n✧|  مسح رسائلي - رس .\n✧|  غنيلي - غ .\n✧| مسح قائمه العام - #")  
+end
+if text == "اضف امر" and ChCheck(msg) or text == "اضافة امر" and ChCheck(msg) or text == "اضافه امر" and ChCheck(msg) then
+DevRio:set(David.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر القديم", 1, 'html')
+return false
+end
+if text == "حذف امر" and ChCheck(msg) or text == "مسح امر" and ChCheck(msg) then 
+DevRio:set(David.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
+Dev_Rio(msg.chat_id_, msg.id_, 1, "✧| ارسل الامر الذي قمت باضافته يدويا", 1, 'html')
+return false
+end
+end
+--     Source David     --
+
 if text == "الصلاحيات" and ChCheck(msg) or text == "صلاحيات" and ChCheck(msg) then 
 local List = DevRio:smembers(David.."Coomds"..msg.chat_id_)
 if #List == 0 then
@@ -11238,7 +11232,7 @@ dp = 'متحركه 🎭'
 elseif DevRio:get(David.."Rio:Voice:GpRed"..v..msg.chat_id_) then
 dp = 'بصمه 🎙'
 elseif DevRio:get(David.."Rio:Stecker:GpRed"..v..msg.chat_id_) then
-dp = 'ملصق 🃏'
+dp = 'ملصق ??'
 elseif DevRio:get(David.."Rio:Text:GpRed"..v..msg.chat_id_) then
 dp = 'رساله ✉'
 elseif DevRio:get(David.."Rio:Photo:GpRed"..v..msg.chat_id_) then
