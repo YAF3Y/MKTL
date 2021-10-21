@@ -9933,9 +9933,120 @@ local Text = [[
 ✧| لو خيروك من بين هذه وش تختار ?!...
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList1:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList11:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList11:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/HelpList11:(.*)') then
+local Rio = DataText:match('/HelpList11:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not SourceCh(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Help = DevRio:get(David..'Rio:Help11')
+local Text = [[
+✧| لو خيروك
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
+end
+if DataText and DataText:match('/HelpList22:(.*)') then
+local Rio = DataText:match('/HelpList22:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not SourceCh(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Help = DevRio:get(David..'Rio:Help22')
+local Text = [[
+✧| لو خيروك 3
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList33:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList33:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList33:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList33:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
+end
+if DataText and DataText:match('/HelpList33:(.*)') then
+local Rio = DataText:match('/HelpList33:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not SourceCh(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Help = DevRio:get(David..'Rio:Help33')
+local Text = [[
+✧| لو خيروك 4
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList44:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList44:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList44:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList44:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
+end
+if DataText and DataText:match('/HelpList44:(.*)') then
+local Rio = DataText:match('/HelpList44:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not SourceCh(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Help = DevRio:get(David..'Rio:Help44')
+local Text = [[
+✧| لو خيروك 5
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList55:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList55:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList55:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList55:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
+end
+if DataText and DataText:match('/HelpList55:(.*)') then
+local Rio = DataText:match('/HelpList55:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not SourceCh(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Help = DevRio:get(David..'Rio:Help55')
+local Text = [[
+✧| لو خيروك 6
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList66:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList66:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList66:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList66:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
+end
+if DataText and DataText:match('/HelpList66:(.*)') then
+local Rio = DataText:match('/HelpList66:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+local Help = DevRio:get(David..'Rio:Help66')
+local Text = [[
+✧| لو خيروك 7
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الصحه",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الفلوس",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="• الغاء •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
+end
 end
 if text == "تفعيل الاغاني" and Manager(msg) and SourceCh(msg) or text == "تفعيل اغنيه" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '✧| اهلا عزيزي ↫ 「 '..RioRank(msg)..' 」\n✧| تم تفعيل الاغاني'
