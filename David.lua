@@ -9927,73 +9927,83 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source David     --
-if text == 'لو خيروك' and Admins(msg) then
-send(msg.chat_id_, msg.id_,'• عذرا الاوامر هذا لا تخصك ') 
-return false
-end
-local Text =[[
+if text == "لو خيروك" and SourceCh(msg) then
+local Text = [[
 ✧| لو خيروك من بين هذه وش تختار ?!...
+]] 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="الفلوس",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الصحه",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+Msg_id = msg.id_/2097152/0.5
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/HelpList22:(.*)') then
+local Rio = DataText:match('/HelpList22:(.*)')
+if tonumber(Rio) == tonumber(data.sender_user_id_) then
+if not Admin(data) then
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
+end
+local Text = [[
+✧| اوامر الادمنيه ↫ ⤈
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| الاعدادت
+✧| تاك للكل 
+✧| انشاء رابط
+✧| ضع وصف
+✧| ضع رابط
+✧| ضع صوره
+✧| حذف الرابط
+✧| حذف الحمير
+✧| كشف البوتات
+✧| طرد البوتات
+✧| تنظيف + العدد
+✧| تنظيف التعديل
+✧| قول + الكلمه
+✧| اسم البوت + الامر
+✧| ضع • حذف ↫ ترحيب
+✧| ضع • حذف ↫ قوانين
+✧| اضف • حذف ↫ صلاحيه
+✧| الصلاحيات • حذف الصلاحيات
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| ضع سبام + العدد
+✧| ضع تكرار + العدد
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| رفع مميز • تنزيل مميز
+✧| المميزين • حذف المميزين
+✧| كشف القيود • رفع القيود
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| حذف • مسح + بالرد
+✧| منع • الغاء منع
+✧| قائمه المنع
+✧| حذف قائمه المنع
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| تفعيل • تعطيل ↫ الرابط
+✧| تفعيل • تعطيل ↫ الالعاب
+✧| تفعيل • تعطيل ↫ الترحيب
+✧| تفعيل • تعطيل ↫ التاك للكل
+✧| تفعيل • تعطيل ↫ كشف الاعدادات
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| طرد المحذوفين
+✧| طرد ↫ بالرد • بالمعرف • بالايدي
+✧| كتم • الغاء كتم
+✧| تقيد • الغاء تقيد
+✧| حظر • الغاء حظر
+✧| المكتومين • حذف المكتومين
+✧| المقيدين • حذف المقيدين
+✧| المحظورين • حذف المحظورين
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| تقييد دقيقه + عدد الدقائق
+✧| تقييد ساعه + عدد الساعات
+✧| تقييد يوم + عدد الايام
+✧| الغاء تقييد ↫ لالغاء التقييد بالوقت
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+✧| [Source Channel](https://t.me/UUKXX)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الصحة', callback_data="/help1"},{text = 'الفلوس', callback_data="/help2"},
-},
-{
-{text = 'راحة البال', callback_data="/help3"},{text = 'الحظ', callback_data="/help4"},
-},
-{
-{text = 'اغلاق اللعبة', callback_data="/clos"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
+keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
 end
-if data.ID == "UpdateNewCallbackQuery" then
-local Chat_id = data.chat_id_
-local Msg_id = data.message_id_
-local msg_idd = Msg_id/2097152/0.5
-local Text = data.payload_.data_
-if Text == '/help1' and Admins(data) then
-local notText = '🚫 عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[
-
-●ـ▬ـ▬ஜ۩۞۩ஜ▬ـ▬ـ●
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الصحة', callback_data="/help1"},{text = 'الفلوس', callback_data="/help2"},
-},
-{
-{text = 'راحة البال', callback_data="/help3"},{text = 'الحظ', callback_data="/help4"},
-},
-{
-{text = 'اغلاق اللعبة', callback_data="/clos"},
-},
-}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end
-if Text == '/clos' then
-if not Admins(data) then
-local notText = '🚫 عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[*تـم اغـلاق الـلـوحـة*
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '', callback_data="/clos"},
-},
-}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if text == "تفعيل الاغاني" and Manager(msg) and SourceCh(msg) or text == "تفعيل اغنيه" and Manager(msg) and SourceCh(msg) then
 local DavidTeam = '✧| اهلا عزيزي ↫ 「 '..RioRank(msg)..' 」\n✧| تم تفعيل الاغاني'
