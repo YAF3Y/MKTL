@@ -9927,8 +9927,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source David     --
-if text == 'خيروك' or text == 'لو خيروك' or text == 'لو خيرك' or text == 'خيروك' then
-if not SourceCh(msg) then
+if text == 'لو خيروك' and SourceCh(msg) then
 send(msg.chat_id_, msg.id_,'• عذرا الاوامر هذا لا تخصك ') 
 return false
 end
@@ -9956,8 +9955,7 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
-if Text == '/help1' then
-if not SourceCh(data) then
+if Text == '/help1' and SourceCh(data) then
 local notText = '🚫 عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..TokenBot.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
