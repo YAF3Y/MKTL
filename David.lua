@@ -9928,13 +9928,13 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' ..
 end
 --     Source David     --
 if text == "لو خيروك" and SourceCh(msg) then
-local Text = [[
+local Teext = [[
 ✧| لو خيروك من بين هذه وش تختار ?!...
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="الفلوس",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الصحه",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="راحة البال",callback_data="/HelpList22:"..msg.sender_user_id_},{text="الحظ",callback_data="/HelpList22:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Teext).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if DataText and DataText:match('/HelpList22:(.*)') then
 local Rio = DataText:match('/HelpList22:(.*)')
@@ -9942,7 +9942,7 @@ if tonumber(Rio) == tonumber(data.sender_user_id_) then
 if not Admin(data) then
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا ليس لديك صلاحية التحكم لهذا الامر .")..'&show_alert=true')
 end
-local Text = [[
+local Teext = [[
 ✧| اوامر الادمنيه ↫ ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 ✧| الاعدادت
@@ -10000,7 +10000,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Teext).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✧| عذرا الامر ليس لك .")..'&show_alert=true')
 end
